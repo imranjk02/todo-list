@@ -126,3 +126,11 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # Remaining middleware
+]
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
